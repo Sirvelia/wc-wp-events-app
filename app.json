@@ -1,0 +1,78 @@
+{
+  "expo": {
+    "name": "WC & WP Events",
+    "slug": "wc-wp-events-app",
+    "version": "1.7.1",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "wcwpeventsapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sirvelia.wcwpeventsapp",
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/splash-icon.png",
+        "backgroundColor": "#2c90ce"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.sirvelia.wcwpeventsapp",
+      "versionCode": 1701
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "buildToolsVersion": "35.0.0",
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35
+          },
+          "ios": {
+            "deploymentTarget": "15.1"
+          }
+        }
+      ],
+      "expo-notifications",
+      "expo-localization",
+      [
+        "expo-localization",
+        {
+          "supportedLocales": {
+            "ios": [
+              "en",
+              "es"
+            ],
+            "android": [
+              "en",
+              "es"
+            ]
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

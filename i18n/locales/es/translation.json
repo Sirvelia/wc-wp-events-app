@@ -1,0 +1,64 @@
+{
+    "common": {
+        "back": "Atrás"
+    },
+    "date-format": {
+        "date": "d 'de' MMMM 'de' yyyy"
+    },
+    "tabs": {
+        "home": "Inicio",
+        "program": "Programa",
+        "speakers": "Ponentes",
+        "sponsors": "Patrocinadores"
+    },
+    "header": {
+        "title": "Selecciona un evento"
+    },
+    "event-selection": {
+        "title": "Selecciona un evento",
+        "description": "Selecciona un evento para empezar",
+        "search-placeholder": "Buscar eventos...",
+        "no-results-found": "No se encontraron eventos que coincidan con tu búsqueda",
+        "no-results-available": "No hay eventos disponibles",
+        "refresh-events": "Actualizar eventos"
+    },
+    "event-details": {
+        "title": "Detalles del evento",
+        "loading": "Cargando detalles del evento..."
+    },
+    "current-sessions": {
+        "title": "Sesiones actuales",
+        "no-sessions": "No hay sesiones actualmente en vivo"
+    },
+    "my-schedule": {
+        "title": "Mi programa",
+        "no-sessions-selected": "No hay sesiones seleccionadas",
+        "browse-sessions": "Explora las sesiones y agrega las que te interesan a tu programa.",
+        "start-building-schedule": "Comienza a construir tu programa seleccionando las sesiones que te interesan."
+    },
+    "program": {
+        "title": "Programa",
+        "day": "Día {{number}}",
+        "no-untracked-sessions": "No hay sesiones sin tracks asignados"
+    },
+    "session": {
+        "title": "Sesión",
+        "not-found": "Sesión no encontrada",
+        "error-loading": "Error al cargar la sesión: ",
+        "tracks": "Tracks",
+        "categories": "Categorías"
+    },
+    "sponsor": {
+        "title": "Patrocinador"
+    },
+    "speaker": {
+        "title": "Ponente",
+        "not-found": "Ponente no encontrado",
+        "error-loading": "Error al cargar el ponente: ",
+        "about": "Acerca de",
+        "sessions-title": "Sesiones"
+    },
+    "category": {
+        "title": "Categoría"
+    }
+}

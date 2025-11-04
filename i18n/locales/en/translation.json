@@ -1,0 +1,64 @@
+{
+    "common": {
+        "back": "Back"
+    },
+    "date-format": {
+        "date": "MMM d, yyyy"
+    },
+    "tabs": {
+        "home": "Home",
+        "program": "Program",
+        "speakers": "Speakers",
+        "sponsors": "Sponsors"
+    },
+    "header": {
+        "title": "Select an event"
+    },
+    "event-selection": {
+        "title": "Select an event",
+        "description": "Select an event to get started",
+        "search-placeholder": "Search events...",
+        "no-results-found": "No events found matching your search",
+        "no-results-available": "No events available",
+        "refresh-events": "Refresh Events"
+    },
+    "event-details": {
+        "title": "Event Details",
+        "loading": "Loading event details..."
+    },
+    "current-sessions": {
+        "title": "Current Sessions",
+        "no-sessions": "No sessions are currently live"
+    },
+    "my-schedule": {
+        "title": "My Schedule",
+        "no-sessions-selected": "No sessions selected",
+        "browse-sessions": "Browse through the sessions and add the ones you're interested in to your schedule.",
+        "start-building-schedule": "Start building your schedule by selecting sessions that interest you."
+    },
+    "program": {
+        "title": "Program",
+        "day": "Day {{number}}",
+        "no-untracked-sessions": "No untracked sessions available"
+    },
+    "session": {
+        "title": "Session",
+        "not-found": "Session not found",
+        "error-loading": "Error loading session: ",
+        "tracks": "Tracks",
+        "categories": "Categories"
+    },
+    "sponsor": {
+        "title": "Sponsor"
+    },
+    "speaker": {
+        "title": "Speaker",
+        "not-found": "Speaker not found",
+        "error-loading": "Error loading speaker: ",
+        "about": "About",
+        "sessions-title": "Sessions"
+    },
+    "category": {
+        "title": "Category"
+    }
+}
