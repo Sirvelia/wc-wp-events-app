@@ -19,31 +19,31 @@ A cross-platform mobile application built with React Native and Expo for discove
 ## Tech Stack
 
 ### Core
-- **React Native** 0.81.4
-- **Expo SDK** ~54.0.1
-- **TypeScript** ~5.9.2
-- **Expo Router** ~6.0.8 (File-based routing)
+- **React Native**
+- **Expo SDK**
+- **TypeScript**
+- **Expo Router** (File-based routing)
 
 ### State Management & Data Fetching
-- **TanStack Query** ^5.90.1 (Data fetching and caching)
-- **Zustand** ^5.0.8 (Global state management)
-- **AsyncStorage** 2.2.0 (Persistent storage)
+- **TanStack Query** (Data fetching and caching)
+- **Zustand** (Global state management)
+- **AsyncStorage** (Persistent storage)
 
 ### UI & Navigation
-- **React Navigation** ^7.1.6
-- **Expo Symbols** ~1.0.7
-- **React Native Gesture Handler** ~2.28.0
-- **React Native Reanimated** ~4.1.0
+- **React Navigation**
+- **Expo Symbols**
+- **React Native Gesture Handler**
+- **React Native Reanimated**
 
 ### Internationalization
-- **i18n-js** ^4.5.1
-- **react-i18next** ^16.1.6
-- **expo-localization** ~17.0.7
+- **i18n-js**
+- **react-i18next**
+- **expo-localization**
 
 ### Additional Libraries
-- **axios** ^1.12.2 (HTTP client)
-- **luxon** ^3.6.1 (Date/time handling)
-- **react-native-render-html** ^6.3.4 (HTML content rendering)
+- **axios** (HTTP client)
+- **luxon** (Date/time handling)
+- **react-native-render-html** (HTML content rendering)
 
 ## Prerequisites
 
@@ -96,67 +96,18 @@ npm run lint
 
 ```
 wc-wp-events-app/
-├── app/                          # Expo Router pages
-│   ├── (tabs)/                   # Tab-based navigation
-│   │   ├── index.tsx            # Home screen
-│   │   ├── event-selection.tsx  # Event selection screen
-│   │   ├── program.tsx          # Event program/schedule
-│   │   ├── speakers.tsx         # Speakers list
-│   │   └── sponsors.tsx         # Sponsors list
-│   ├── session/[sessionId]/     # Session detail screen
-│   ├── speaker/[speakerId]/     # Speaker detail screen
-│   ├── sponsor/[sponsorId]/     # Sponsor detail screen
-│   └── _layout.tsx              # Root layout
-├── api/                          # API integration
-│   └── index.ts                 # WordPress REST API client
-├── components/                   # Reusable components
-│   ├── ui/                      # UI components
-│   │   ├── ThemedCard.tsx
-│   │   ├── ThemedText.tsx
-│   │   ├── ThemedView.tsx
-│   │   └── ThemedRenderHTML.tsx
-│   ├── CurrentSessions.tsx
-│   ├── EventDetails.tsx
-│   ├── MySchedule.tsx
-│   ├── SessionCard.tsx
-│   ├── SessionProgram.tsx
-│   ├── SpeakerCard.tsx
-│   ├── SpeakersList.tsx
-│   ├── SponsorCard.tsx
-│   └── SponsorsList.tsx
-├── contexts/                     # React contexts
-│   ├── MyScheduleContext.tsx
-│   └── NotificationsContext.tsx
-├── hooks/                        # Custom React hooks
-│   ├── useColorScheme.ts
-│   ├── useNotifications.ts
-│   ├── useSessions.ts
-│   ├── useSpeakers.ts
-│   ├── useSponsors.ts
-│   ├── useThemeColor.ts
-│   └── useTimeConverter.ts
-├── i18n/                         # Internationalization
-│   ├── locales/
-│   │   ├── en/translation.json
-│   │   └── es/translation.json
-│   └── index.ts
-├── stores/                       # Zustand stores
-│   └── selectedEventStore.ts
-├── types/                        # TypeScript type definitions
-│   ├── Event.ts
-│   ├── Session.ts
-│   ├── Speaker.ts
-│   ├── Sponsor.ts
-│   └── Media.ts
-├── utils/                        # Utility functions
-│   └── dateFormat.ts
-├── query-options/                # TanStack Query configurations
-│   └── index.ts
-├── constants/                    # App constants
-│   └── Colors.ts
-└── assets/                       # Static assets
-    ├── images/
-    └── fonts/
+├── app/                # Expo Router pages and navigation
+├── api/                # API integration
+├── components/         # Reusable UI components
+├── contexts/           # React contexts
+├── hooks/              # Custom React hooks
+├── i18n/               # Internationalization
+├── stores/             # Zustand stores
+├── types/              # TypeScript type definitions
+├── utils/              # Utility functions
+├── query-options/      # TanStack Query configurations
+├── constants/          # App constants
+└── assets/             # Static assets
 ```
 
 ## API Integration
@@ -220,14 +171,6 @@ Configuration is managed in `app.json`:
 - **Supported Locales**: English (en), Spanish (es)
 - **URL Scheme**: `wcwpeventsapp://`
 
-## Environment
-
-- **iOS Deployment Target**: 15.1+
-- **Android SDK**:
-  - Build Tools: 35.0.0
-  - Compile SDK: 35
-  - Target SDK: 35
-
 ## Contributing
 
 Contributions are welcome! Please follow these steps:
@@ -237,10 +180,6 @@ Contributions are welcome! Please follow these steps:
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-## License
-
-Copyright © Sirvelia. All rights reserved.
 
 ## Support
 
