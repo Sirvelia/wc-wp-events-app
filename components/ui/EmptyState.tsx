@@ -28,7 +28,7 @@ export interface EmptyStateProps {
  */
 export function EmptyState({ title, message, icon }: EmptyStateProps) {
   return (
-    <ThemedView style={styles.container}>
+    <ThemedView style={styles.container} contentContainerStyle={styles.contentContainer}>
       <View style={styles.content}>
         {icon && (
           <Ionicons name={icon} size={48} color="#999" style={styles.icon} />
@@ -44,6 +44,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
+  },
+  contentContainer: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },

@@ -27,7 +27,7 @@ export function ErrorState({ error, message = "Error: " }: ErrorStateProps) {
   const errorMessage = error instanceof Error ? error.message : error;
 
   return (
-    <ThemedView style={styles.container}>
+    <ThemedView style={styles.container} contentContainerStyle={styles.contentContainer}>
       <ThemedText style={styles.errorText}>
         {message}{errorMessage}
       </ThemedText>
@@ -39,6 +39,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
+  },
+  contentContainer: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
