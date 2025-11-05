@@ -1,4 +1,8 @@
 import SessionAddMySchedule from "@/components/SessionAddMySchedule";
+import { EmptyState } from "@/components/ui/EmptyState";
+import { ErrorState } from "@/components/ui/ErrorState";
+import { LoadingState } from "@/components/ui/LoadingState";
+import { PageHeader } from "@/components/ui/PageHeader";
 import ThemedRenderHTML from "@/components/ui/ThemedRenderHTML";
 import { ThemedText } from "@/components/ui/ThemedText";
 import { ThemedView } from "@/components/ui/ThemedView";
@@ -15,15 +19,10 @@ import { router, useLocalSearchParams } from "expo-router";
 import { decode } from 'html-entities';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { ActivityIndicator, Image, Pressable, StyleSheet, View } from "react-native";
+import { Image, Pressable, StyleSheet, View } from "react-native";
 
 export function SessionHeaderTitle() {
-  const { t, i18n } = useTranslation();
-  return (
-    <View style={{ alignItems: 'flex-start' }}>
-      <ThemedText style={{ fontSize: 18, fontWeight: 'bold' }}>{t('session.title')}</ThemedText>
-    </View>
-  );
+  return <PageHeader translationKey="session.title" />;
 }
 export default function SessionScreen() {
   const { t, i18n } = useTranslation();
@@ -40,27 +39,15 @@ export default function SessionScreen() {
   const { data: categories } = useQuery(getEventCategoriesQueryOptions(event?.URL || ''));
 
   if (isLoading) {
-    return (
-      <ThemedView style={{ flex: 1, padding: 10 }}>
-        <ActivityIndicator size="large" />
-      </ThemedView>
-    );
+    return <LoadingState />;
   }
 
   if (error) {
-    return (
-      <ThemedView style={{ flex: 1, padding: 10 }}>
-        <ThemedText>{t('session.error-loading')} {error.message}</ThemedText>
-      </ThemedView>
-    );
+    return <ErrorState error={error} message={t('session.error-loading')} />;
   }
 
   if (!session) {
-    return (
-      <ThemedView style={{ flex: 1, padding: 10 }}>
-        <ThemedText>{t('session.not-found')}</ThemedText>
-      </ThemedView>
-    );
+    return <EmptyState title={t('session.not-found')} icon="calendar-outline" />;
   }
 
   const { dateTime: localDate, localTime } = convertTime(session.meta?._wcpt_session_time, eventDetails?.gmt_offset || 0);
