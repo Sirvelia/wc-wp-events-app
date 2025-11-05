@@ -209,21 +209,6 @@ npx expo build:ios
 npx expo build:android
 ```
 
-### EAS Build (Recommended)
-```bash
-# Install EAS CLI
-npm install -g eas-cli
-
-# Configure
-eas build:configure
-
-# Build for iOS
-eas build --platform ios
-
-# Build for Android
-eas build --platform android
-```
-
 ## App Configuration
 
 Configuration is managed in `app.json`:
