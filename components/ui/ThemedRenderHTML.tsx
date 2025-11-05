@@ -8,6 +8,8 @@ export default function ThemedRenderHTML({ html }: { html: string }) {
     const primaryColor = useThemeColor({}, 'primary');
     const { width } = useWindowDimensions();
 
+    const source = useMemo(() => ({ html }), [html]);
+
     const baseStyle = useMemo(() => ({
         fontSize: 16,
         color: textColor,
@@ -127,7 +129,7 @@ export default function ThemedRenderHTML({ html }: { html: string }) {
     return (
         <RenderHtml
             contentWidth={width}
-            source={{ html }}
+            source={source}
             baseStyle={baseStyle}
             tagsStyles={tagsStyles}
         />
