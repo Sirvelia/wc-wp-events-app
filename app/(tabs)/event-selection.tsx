@@ -1,7 +1,7 @@
 import EventSelectionItem from '@/components/EventSelectionItem';
-import { useMemo, useState } from "react";
-import { ActivityIndicator, Pressable, StyleSheet, TextInput, View } from "react-native";
-
+import { EmptyState } from "@/components/ui/EmptyState";
+import { ErrorState } from "@/components/ui/ErrorState";
+import { LoadingState } from "@/components/ui/LoadingState";
 import { ThemedCard } from "@/components/ui/ThemedCard";
 import { ThemedText } from "@/components/ui/ThemedText";
 import { ThemedView } from "@/components/ui/ThemedView";
@@ -10,6 +10,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { useQuery } from '@tanstack/react-query';
 import "@/i18n";
 import { useTranslation } from 'react-i18next';
+import { useMemo, useState } from "react";
+import { Pressable, StyleSheet, TextInput, View } from "react-native";
 export default function EventSelectionScreen() {
     const [searchTerm, setSearchTerm] = useState('');
 
@@ -27,27 +29,15 @@ export default function EventSelectionScreen() {
     }, [data, searchTerm]);
 
     if (isPending) {
-        return (
-            <ThemedView style={{ flex: 1 }}>
-                <ActivityIndicator size="large" />
-            </ThemedView>
-        );
+        return <LoadingState />;
     }
 
     if (error) {
-        return (
-            <ThemedView style={{ flex: 1 }}>
-                <ThemedText>Error loading events: {error.message}</ThemedText>
-            </ThemedView>
-        );
+        return <ErrorState error={error} message="Error loading events:" />;
     }
 
     if (!data || data.length === 0) {
-        return (
-            <ThemedView style={{ flex: 1 }}>
-                <ThemedText>No events available</ThemedText>
-            </ThemedView>
-        );
+        return <EmptyState title="No events available" icon="calendar-outline" />;
     }
 
     return (

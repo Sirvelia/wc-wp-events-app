@@ -1,4 +1,8 @@
 import SessionCard from "@/components/SessionCard";
+import { EmptyState } from "@/components/ui/EmptyState";
+import { ErrorState } from "@/components/ui/ErrorState";
+import { LoadingState } from "@/components/ui/LoadingState";
+import { PageHeader } from "@/components/ui/PageHeader";
 import ThemedRenderHTML from "@/components/ui/ThemedRenderHTML";
 import { ThemedText } from "@/components/ui/ThemedText";
 import { ThemedView } from "@/components/ui/ThemedView";
@@ -10,15 +14,10 @@ import { useQuery } from "@tanstack/react-query";
 import { useLocalSearchParams } from "expo-router";
 import { decode } from 'html-entities';
 import { useTranslation } from 'react-i18next';
-import { ActivityIndicator, Image, StyleSheet, View } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
 
 export function SpeakerHeaderTitle() {
-  const { t, i18n } = useTranslation();
-  return (
-    <View style={{ alignItems: 'flex-start' }}>
-      <ThemedText style={{ fontSize: 18, fontWeight: 'bold' }}>{t('speaker.title')}</ThemedText>
-    </View>
-  );
+  return <PageHeader translationKey="speaker.title" />;
 }
 
 export default function SpeakerScreen() {
@@ -32,27 +31,15 @@ export default function SpeakerScreen() {
   const sessions = getSessionsBySpeaker(Number(speakerId));
 
   if (isPending) {
-    return (
-      <ThemedView style={{ flex: 1, padding: 10 }}>
-        <ActivityIndicator size="large" />
-      </ThemedView>
-    );
+    return <LoadingState />;
   }
 
   if (error) {
-    return (
-      <ThemedView style={{ flex: 1, padding: 10 }}>
-        <ThemedText>{t('speaker.error-loading')} {error.message}</ThemedText>
-      </ThemedView>
-    );
+    return <ErrorState error={error} message={t('speaker.error-loading')} />;
   }
 
   if (!speaker) {
-    return (
-      <ThemedView style={{ flex: 1, padding: 10 }}>
-        <ThemedText>{t('speaker.not-found')}</ThemedText>
-      </ThemedView>
-    );
+    return <EmptyState title={t('speaker.not-found')} icon="person-outline" />;
   }
 
   return (

@@ -1,3 +1,7 @@
+import { EmptyState } from "@/components/ui/EmptyState";
+import { ErrorState } from "@/components/ui/ErrorState";
+import { LoadingState } from "@/components/ui/LoadingState";
+import { PageHeader } from "@/components/ui/PageHeader";
 import ThemedRenderHTML from "@/components/ui/ThemedRenderHTML";
 import { ThemedText } from "@/components/ui/ThemedText";
 import { ThemedView } from "@/components/ui/ThemedView";
@@ -8,15 +12,10 @@ import { useQuery } from "@tanstack/react-query";
 import { useLocalSearchParams } from "expo-router";
 import { decode } from 'html-entities';
 import { useTranslation } from 'react-i18next';
-import { ActivityIndicator, Image, StyleSheet, View } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
 
 export function SponsorHeaderTitle() {
-  const { t, i18n } = useTranslation();
-  return (
-    <View style={{ alignItems: 'flex-start' }}>
-      <ThemedText style={{ fontSize: 18, fontWeight: 'bold' }}>{t('sponsor.title')}</ThemedText>
-    </View>
-  );
+  return <PageHeader translationKey="sponsor.title" />;
 }
 
 export default function SponsorScreen() {
@@ -28,27 +27,15 @@ export default function SponsorScreen() {
   const { data: media } = useQuery(getEventSingleMediaQueryOptions(event?.URL || '', sponsor?.featured_media || 0));
 
   if (isPending) {
-    return (
-      <ThemedView style={{ flex: 1, padding: 10 }}>
-        <ActivityIndicator size="large" />
-      </ThemedView>
-    );
+    return <LoadingState />;
   }
 
   if (error) {
-    return (
-      <ThemedView style={{ flex: 1, padding: 10 }}>
-        <ThemedText>Error loading sponsor: {error.message}</ThemedText>
-      </ThemedView>
-    );
+    return <ErrorState error={error} message="Error loading sponsor:" />;
   }
 
   if (!sponsor) {
-    return (
-      <ThemedView style={{ flex: 1, padding: 10 }}>
-        <ThemedText>Sponsor not found</ThemedText>
-      </ThemedView>
-    );
+    return <EmptyState title="Sponsor not found" icon="business-outline" />;
   }
 
   return (
