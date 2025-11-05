@@ -1,7 +1,7 @@
 import { ThemedText } from "@/components/ui/ThemedText";
 import { ThemedView } from "@/components/ui/ThemedView";
 import { Ionicons } from "@expo/vector-icons";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, useWindowDimensions, View } from "react-native";
 
 /**
  * Props for the EmptyState component
@@ -27,8 +27,10 @@ export interface EmptyStateProps {
  * ```
  */
 export function EmptyState({ title, message, icon }: EmptyStateProps) {
+  const { height } = useWindowDimensions();
+
   return (
-    <ThemedView style={styles.container} contentContainerStyle={styles.contentContainer}>
+    <ThemedView style={styles.container} contentContainerStyle={[styles.contentContainer, { minHeight: height - 20 }]}>
       <View style={styles.content}>
         {icon && (
           <Ionicons name={icon} size={48} color="#999" style={styles.icon} />
@@ -46,7 +48,6 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   contentContainer: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },

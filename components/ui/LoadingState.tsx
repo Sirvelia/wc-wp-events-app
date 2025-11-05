@@ -1,5 +1,5 @@
 import { ThemedView } from "@/components/ui/ThemedView";
-import { ActivityIndicator, StyleSheet } from "react-native";
+import { ActivityIndicator, StyleSheet, useWindowDimensions } from "react-native";
 
 /**
  * Shared loading state component with a centered activity indicator
@@ -13,8 +13,10 @@ import { ActivityIndicator, StyleSheet } from "react-native";
  * ```
  */
 export function LoadingState() {
+  const { height } = useWindowDimensions();
+
   return (
-    <ThemedView style={styles.container} contentContainerStyle={styles.contentContainer}>
+    <ThemedView style={styles.container} contentContainerStyle={[styles.contentContainer, { minHeight: height - 20 }]}>
       <ActivityIndicator size="large" />
     </ThemedView>
   );
@@ -26,7 +28,6 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   contentContainer: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },

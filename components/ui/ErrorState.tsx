@@ -1,6 +1,6 @@
 import { ThemedText } from "@/components/ui/ThemedText";
 import { ThemedView } from "@/components/ui/ThemedView";
-import { StyleSheet } from "react-native";
+import { StyleSheet, useWindowDimensions } from "react-native";
 
 /**
  * Props for the ErrorState component
@@ -25,9 +25,10 @@ export interface ErrorStateProps {
  */
 export function ErrorState({ error, message = "Error: " }: ErrorStateProps) {
   const errorMessage = error instanceof Error ? error.message : error;
+  const { height } = useWindowDimensions();
 
   return (
-    <ThemedView style={styles.container} contentContainerStyle={styles.contentContainer}>
+    <ThemedView style={styles.container} contentContainerStyle={[styles.contentContainer, { minHeight: height - 20 }]}>
       <ThemedText style={styles.errorText}>
         {message}{errorMessage}
       </ThemedText>
@@ -41,7 +42,6 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   contentContainer: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
