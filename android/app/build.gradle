@@ -95,13 +95,6 @@ android {
         versionCode 1702
         versionName "1.7.2"
         resourceConfigurations += ["en", "es"]
-        resourceConfigurations += ["en", "es"]
-        resourceConfigurations += ["en", "es"]
-        resourceConfigurations += ["en", "es"]
-        resourceConfigurations += ["en", "es"]
-        resourceConfigurations += ["en", "es"]
-        resourceConfigurations += ["en", "es"]
-        resourceConfigurations += ["en", "es"]
     }
     signingConfigs {
         debug {
