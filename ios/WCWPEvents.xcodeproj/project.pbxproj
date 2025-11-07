@@ -373,7 +373,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sirvelia.wcwpeventsapp;
-				PRODUCT_NAME = WCWPEvents;
+				PRODUCT_NAME = "WCWPEvents";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Amadeu Arderiu Production";
 				SWIFT_OBJC_BRIDGING_HEADER = "WCWPEvents/WCWPEvents-Bridging-Header.h";
@@ -410,7 +410,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sirvelia.wcwpeventsapp;
-				PRODUCT_NAME = WCWPEvents;
+				PRODUCT_NAME = "WCWPEvents";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Amadeu Arderiu Production";
 				SWIFT_OBJC_BRIDGING_HEADER = "WCWPEvents/WCWPEvents-Bridging-Header.h";

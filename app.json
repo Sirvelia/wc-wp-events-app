@@ -2,7 +2,7 @@
   "expo": {
     "name": "WC & WP Events",
     "slug": "wc-wp-events-app",
-    "version": "1.7.1",
+    "version": "1.7.2",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "wcwpeventsapp",
@@ -22,7 +22,7 @@
       },
       "edgeToEdgeEnabled": true,
       "package": "com.sirvelia.wcwpeventsapp",
-      "versionCode": 1701
+      "versionCode": 1702
     },
     "web": {
       "bundler": "metro",
