@@ -13,6 +13,12 @@
       "bundleIdentifier": "com.sirvelia.wcwpeventsapp",
       "config": {
         "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "CFBundleLocalizations": [
+          "en",
+          "es"
+        ]
       }
     },
     "android": {
@@ -69,10 +75,18 @@
             ]
           }
         }
-      ]
+      ],
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "04631bdd-cf01-4320-8cc3-a560df08ccad"
+      }
+    },
+    "owner": "sirvelia-labs"
   }
 }
