@@ -27,8 +27,7 @@
         "backgroundColor": "#2c90ce"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.sirvelia.wcwpeventsapp",
-      "versionCode": 1702
+      "package": "com.sirvelia.wcwpeventsapp"
     },
     "web": {
       "bundler": "metro",
