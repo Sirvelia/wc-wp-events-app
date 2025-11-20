@@ -18,9 +18,7 @@
           "CFBundleLocalizations": [
             "en",
             "es"
-          ],
-          "NSCameraUsageDescription": "This app needs access to your camera to scan QR codes for contact sharing.",
-          "NSContactsUsageDescription": "This app needs access to your contacts to save scanned contact information."
+          ]
         }
       },
       "android": {
@@ -29,12 +27,7 @@
           "backgroundColor": "#2c90ce"
         },
         "edgeToEdgeEnabled": true,
-        "package": "com.sirvelia.wcwpeventsapp",
-        "permissions": [
-          "CAMERA",
-          "READ_CONTACTS",
-          "WRITE_CONTACTS"
-        ]
+        "package": "com.sirvelia.wcwpeventsapp"
       },
     "web": {
       "bundler": "metro",
@@ -82,19 +75,7 @@
           }
         }
       ],
-      "expo-web-browser",
-      [
-        "expo-camera",
-        {
-          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera to scan QR codes."
-        }
-      ],
-      [
-        "expo-contacts",
-        {
-          "contactsPermission": "Allow $(PRODUCT_NAME) to access your contacts to save scanned contact information."
-        }
-      ]
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true
