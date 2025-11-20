@@ -166,8 +166,7 @@ Configuration is managed in `app.json`:
 - **Bundle Identifiers**:
   - iOS: `com.sirvelia.wcwpeventsapp`
   - Android: `com.sirvelia.wcwpeventsapp`
-- **Version**: 1.7.1
-- **Android Version Code**: 1701
+- **Version**: 1.8.0
 - **Supported Locales**: English (en), Spanish (es)
 - **URL Scheme**: `wcwpeventsapp://`
 
