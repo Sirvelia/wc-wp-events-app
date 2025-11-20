@@ -58,6 +58,12 @@ export default function TabsLayout() {
           <MaterialIcons name="table-restaurant" color={color} size={size} />
         ),
       }} />
+      <Tabs.Screen name="connect" options={{
+        tabBarLabel: t('tabs.connect'),
+        tabBarIcon: ({ color, size }) => (
+          <Ionicons name="git-compare-outline" color={color} size={size} />
+        ),
+      }} />
       <Tabs.Screen name="event-selection" options={{
         href: null,
       }} />

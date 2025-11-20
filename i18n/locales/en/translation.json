@@ -9,7 +9,8 @@
         "home": "Home",
         "program": "Program",
         "speakers": "Speakers",
-        "sponsors": "Sponsors"
+        "sponsors": "Sponsors",
+        "connect": "Connect"
     },
     "header": {
         "title": "Select an event"
@@ -60,5 +61,24 @@
     },
     "category": {
         "title": "Category"
+    },
+    "connect": {
+        "my-connection": "My Profile",
+        "scan-instruction": "Scan this code to share my contact details",
+        "edit-details": "Edit my contact details",
+        "edit-profile": "Edit profile",
+        "save-changes": "Save changes",
+        "no-contact-details": "No contact details set",
+        "please-add-details": "Please add your contact details to generate a QR code",
+        "full-name": "Full name",
+        "email": "Email address",
+        "phone": "Phone number",
+        "company": "Company",
+        "website-url": "Personal website/portfolio URL",
+        "validation": {
+            "full-name-required": "Full name is required",
+            "email-required": "Email address is required",
+            "email-invalid": "Please enter a valid email address"
+        }
     }
 }
