@@ -84,6 +84,16 @@ function AppContent() {
             headerBackTitle: t('common.back'),
           }}
         />
+
+        <Stack.Screen 
+          name="connect/edit" 
+          options={{
+            headerShown: true,
+            headerTitle: t('connect.edit-profile'),
+            headerBackTitle: t('common.back'),
+          }}
+        />
+
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

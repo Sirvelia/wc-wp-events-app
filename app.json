@@ -8,27 +8,34 @@
     "scheme": "wcwpeventsapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.sirvelia.wcwpeventsapp",
-      "config": {
-        "usesNonExemptEncryption": false
+      "ios": {
+        "supportsTablet": true,
+        "bundleIdentifier": "com.sirvelia.wcwpeventsapp",
+        "config": {
+          "usesNonExemptEncryption": false
+        },
+        "infoPlist": {
+          "CFBundleLocalizations": [
+            "en",
+            "es"
+          ],
+          "NSCameraUsageDescription": "This app needs access to your camera to scan QR codes for contact sharing.",
+          "NSContactsUsageDescription": "This app needs access to your contacts to save scanned contact information."
+        }
       },
-      "infoPlist": {
-        "CFBundleLocalizations": [
-          "en",
-          "es"
+      "android": {
+        "adaptiveIcon": {
+          "foregroundImage": "./assets/images/splash-icon.png",
+          "backgroundColor": "#2c90ce"
+        },
+        "edgeToEdgeEnabled": true,
+        "package": "com.sirvelia.wcwpeventsapp",
+        "permissions": [
+          "CAMERA",
+          "READ_CONTACTS",
+          "WRITE_CONTACTS"
         ]
-      }
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/splash-icon.png",
-        "backgroundColor": "#2c90ce"
       },
-      "edgeToEdgeEnabled": true,
-      "package": "com.sirvelia.wcwpeventsapp"
-    },
     "web": {
       "bundler": "metro",
       "output": "static",
@@ -75,7 +82,19 @@
           }
         }
       ],
-      "expo-web-browser"
+      "expo-web-browser",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera to scan QR codes."
+        }
+      ],
+      [
+        "expo-contacts",
+        {
+          "contactsPermission": "Allow $(PRODUCT_NAME) to access your contacts to save scanned contact information."
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

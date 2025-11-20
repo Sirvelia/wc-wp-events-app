@@ -9,7 +9,8 @@
         "home": "Inicio",
         "program": "Programa",
         "speakers": "Ponentes",
-        "sponsors": "Patrocinadores"
+        "sponsors": "Patrocinadores",
+        "connect": "Conectar"
     },
     "header": {
         "title": "Selecciona un evento"
@@ -60,5 +61,24 @@
     },
     "category": {
         "title": "Categoría"
+    },
+    "connect": {
+        "my-connection": "Mi perfil",
+        "scan-instruction": "Escanea este código para compartir mis detalles de contacto",
+        "edit-details": "Editar mis detalles de contacto",
+        "edit-profile": "Editar perfil",
+        "save-changes": "Guardar cambios",
+        "no-contact-details": "No hay detalles de contacto configurados",
+        "please-add-details": "Por favor, agrega tus detalles de contacto para generar un código QR",
+        "full-name": "Nombre completo",
+        "email": "Correo electrónico",
+        "phone": "Número de teléfono",
+        "company": "Empresa",
+        "website-url": "URL del sitio web/portafolio personal",
+        "validation": {
+            "full-name-required": "El nombre completo es requerido",
+            "email-required": "El correo electrónico es requerido",
+            "email-invalid": "Por favor, ingresa un correo electrónico válido"
+        }
     }
 }
