@@ -53,7 +53,7 @@ export function EventDetails() {
                     <View style={styles.eventImageContainer}>
                         <Image source={media?.media_details.sizes.medium?.source_url ? { uri: media?.media_details.sizes.medium?.source_url } : assets?.[0] as ImageSourcePropType} style={styles.eventImage} alt={event?.title.rendered || ''} />
                     </View>
-                    <View>
+                    <View style={{ flex: 1 }}>
                         <ThemedText style={{ fontSize: 18, fontWeight: "bold", lineHeight: 18 }}>{event?.title.rendered}</ThemedText>
                         <ThemedText>{event?._venue_country_name}</ThemedText>
                         <View style={styles.dateContainer}>
