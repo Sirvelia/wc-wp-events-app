@@ -1,0 +1,84 @@
+{
+    "common": {
+        "back": "Voltar"
+    },
+    "date-format": {
+        "date": "d 'de' MMMM 'de' yyyy"
+    },
+    "tabs": {
+        "home": "Início",
+        "program": "Programa",
+        "speakers": "Palestrantes",
+        "sponsors": "Patrocinadores",
+        "connect": "Conectar"
+    },
+    "header": {
+        "title": "Selecione um evento"
+    },
+    "event-selection": {
+        "title": "Selecione um evento",
+        "description": "Selecione um evento para começar",
+        "search-placeholder": "Buscar eventos...",
+        "no-results-found": "Nenhum evento encontrado para sua busca",
+        "no-results-available": "Nenhum evento disponível",
+        "refresh-events": "Atualizar eventos"
+    },
+    "event-details": {
+        "title": "Detalhes do evento",
+        "loading": "Carregando detalhes do evento..."
+    },
+    "current-sessions": {
+        "title": "Sessões atuais",
+        "no-sessions": "Nenhuma sessão ao vivo no momento"
+    },
+    "my-schedule": {
+        "title": "Minha agenda",
+        "no-sessions-selected": "Nenhuma sessão selecionada",
+        "browse-sessions": "Navegue pelas sessões e adicione à sua agenda as que lhe interessam.",
+        "start-building-schedule": "Comece a montar sua agenda selecionando as sessões que lhe interessam."
+    },
+    "program": {
+        "title": "Programa",
+        "day": "Dia {{number}}",
+        "no-untracked-sessions": "Nenhuma sessão sem trilhas atribuídas"
+    },
+    "session": {
+        "title": "Sessão",
+        "not-found": "Sessão não encontrada",
+        "error-loading": "Erro ao carregar a sessão: ",
+        "tracks": "Trilhas",
+        "categories": "Categorias"
+    },
+    "sponsor": {
+        "title": "Patrocinador"
+    },
+    "speaker": {
+        "title": "Palestrante",
+        "not-found": "Palestrante não encontrado",
+        "error-loading": "Erro ao carregar o palestrante: ",
+        "about": "Sobre",
+        "sessions-title": "Sessões"
+    },
+    "category": {
+        "title": "Categoria"
+    },
+    "connect": {
+        "my-connection": "Meu perfil",
+        "scan-instruction": "Escaneie este código para compartilhar meus dados de contato",
+        "edit-details": "Editar meus dados de contato",
+        "edit-profile": "Editar perfil",
+        "save-changes": "Salvar alterações",
+        "no-contact-details": "Nenhum dado de contato definido",
+        "please-add-details": "Adicione seus dados de contato para gerar um código QR",
+        "full-name": "Nome completo",
+        "email": "Endereço de e-mail",
+        "phone": "Número de telefone",
+        "company": "Empresa",
+        "website-url": "URL do site ou portfólio pessoal",
+        "validation": {
+            "full-name-required": "O nome completo é obrigatório",
+            "email-required": "O endereço de e-mail é obrigatório",
+            "email-invalid": "Por favor, insira um endereço de e-mail válido"
+        }
+    }
+}
