@@ -74,10 +74,10 @@
         "email": "Correo electrónico",
         "phone": "Número de teléfono",
         "company": "Empresa",
-        "website-url": "URL del sitio web/portafolio personal",
+        "website-url": "URL del sitio web personal",
         "validation": {
-            "full-name-required": "El nombre completo es requerido",
-            "email-required": "El correo electrónico es requerido",
+            "full-name-required": "El nombre completo es obligatorio",
+            "email-required": "El correo electrónico es obligatorio",
             "email-invalid": "Por favor, ingresa un correo electrónico válido"
         }
     }
