@@ -2,7 +2,7 @@
   "expo": {
     "name": "WC & WP Events",
     "slug": "wc-wp-events-app",
-    "version": "1.8.1",
+    "version": "1.8.2",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "wcwpeventsapp",
@@ -17,7 +17,8 @@
         "infoPlist": {
           "CFBundleLocalizations": [
             "en",
-            "es"
+            "es",
+            "pt"
           ]
         }
       },
@@ -66,11 +67,13 @@
           "supportedLocales": {
             "ios": [
               "en",
-              "es"
+              "es",
+              "pt"
             ],
             "android": [
               "en",
-              "es"
+              "es",
+              "pt"
             ]
           }
         }
